@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.mbc.ontrip.user.UserService">
+	<insert id="usersave">
+		insert into "ontripuser" values(user_seq.nextval,#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7})
+	</insert>
+	
+	<select id="out" resultType="com.mbc.ontrip.user.UserDTO">
+		select * from(
+			select rownum rn, A.* from(
+				select "usernumber","id","pw","phone","email","birth","tripstyle", TRUNC(MONTHS_BETWEEN(sysdate,"birth")/12) as age from "ontripuser" 
+				) A
+		) where rn between #{start} and #{end}
+	</select>
+	
+	<select id="updateview" resultType="com.mbc.ontrip.user.UserDTO">
+		select "usernumber","id","pw","phone","email","birth","tripstyle" from "ontripuser" where "id" = #{param1}
+	</select>
+	
+	<update id="update">
+		update "ontripuser" set "id"=#{param2}, "pw"=#{param3},"phone"=#{param4},"email"=#{param5}, "birth"=#{param6},"tripstyle"=#{param7}
+		where "usernumber"=#{param1}
+	</update>
+	
+	<delete id="delete2">
+		delete from "ontripuser" where "id"=#{param1}
+	</delete>
+	
+	<select id="pwsearch" resultType="String">
+		select "pw" from "ontripuser" where "id"=#{param1}
+	</select>
+	
+	<select id="mypage" resultType="com.mbc.ontrip.user.UserDTO">
+		select * from "ontripuser" where "id"=#{param1}
+	</select>
+	
+	<select id="getAdminpw" resultType="String">
+ 		select "adminpw" from "adminpw" where rownum = 1
+  	</select>
+	
+	<select id="idcnt" resultType="int"> 
+		select count(*) from "ontripuser" where "id" = #{param1} 
+	</select>
+	
+	<select id="usersearch" resultType="com.mbc.ontrip.user.UserDTO">
+		select * from "ontripuser" where "id" like '%'||#{param1}||'%'
+	</select>
+	
+	<select id="passmatch" resultType="com.mbc.ontrip.user.UserDTO">
+		select "id","phone" from "ontripuser" where "id"=#{param1}
+	</select>
+	
+	<update id="newpass">
+		update "ontripuser" set "pw"=#{param2} where "id"=#{param1}
+	</update>
+	
+	<select id="getuser" resultType="com.mbc.ontrip.user.UserDTO">
+		select * from "ontripuser" where "usernumber"=#{param1}
+	</select>
+	
+	<select id="idgetuser" resultType="com.mbc.ontrip.user.UserDTO">
+		select * from "ontripuser" where "id"=#{param1}
+	</select>
+	
+	<select id="matchpw" resultType="com.mbc.ontrip.user.UserDTO">
+		select * from "ontripuser" where "usernumber"=#{param1}
+	</select>
+	
+	<select id="conlike" resultType="com.mbc.ontrip.user.LikeDTO">
+		select co."country", co."tripname", co."tripimg",co."countrynum" from "like" li join "country" co  on li."countrynum"=co."countrynum" where li."id"=#{param1} 
+	</select>
+	
+	<select id="wifilike" resultType="com.mbc.ontrip.user.LikeDTO">
+		select wi."wificountry", wi."wifiname", wi."wifiimg",wi."wifinum", wi."wifilink" from "like" li join "wifi" wi  on li."wifinum"=wi."wifinum" where li."id"=#{param1} 
+	</select>
+	
+	<select id="packlike" resultType="com.mbc.ontrip.user.LikeDTO">
+		select pa."packagecountry", pa."packagename", pa."packageimg",pa."packagenum", pa."packagelink" from "like" li join "package" pa  on li."packagenum"=pa."packagenum" where li."id"=#{param1} 
+	</select>
+	
+	<select id="usertotal" resultType="int">
+		select count(*) from "ontripuser"
+	</select>
+	
+	<select id="usersearchtotal" resultType="int">
+		select count(*) from "ontripuser" where "id" like '%'||#{param1}||'%'
+	</select>
+	
+	
+</mapper>

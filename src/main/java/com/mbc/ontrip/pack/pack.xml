@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mbc.ontrip.pack.PackService">
+
+   <insert id="ps">
+		insert into "package" values(package_seq.nextval,#{param1},#{param2},#{param3},#{param4},#{param5},#{param6})
+	</insert>
+	
+	<select id="packout" resultType="com.mbc.ontrip.pack.PackDTO">
+		select * from(
+			select rownum rn, A.* from(
+				select * from "package" 
+				) A
+		) where rn between #{start} and #{end}
+	</select>
+	
+	<delete id="psd">
+		delete from "package" where  "packagenum"=#{param1}
+	</delete>
+	
+	<select id="pss" resultType="com.mbc.ontrip.pack.PackDTO">
+		select * from "package" where "packagenum"=#{param1}
+	</select>
+	
+	<update id="ps2">
+		update "package" set 
+		"packagename"=#{param1},
+		"packageimg"=#{param2},
+		"packagedetail"=#{param3},
+		"packagelink"=#{param4},
+		"packagecountry"=#{param5},
+		"packageday"=#{param6}
+		 where "packagenum"=#{param7}
+	</update>
+	
+	<select id="packcountry" resultType="com.mbc.ontrip.pack.PackDTO">
+		select * from "package" where "packagecountry"=#{param1}
+	</select>
+	
+	<select id="serch" resultType="com.mbc.ontrip.pack.PackDTO">
+		select * from "package" where "packagecountry"=#{param1} and "packageday"=#{param2}
+	</select>
+	
+	<select id="mainsearch" resultType="com.mbc.ontrip.pack.PackDTO">
+		select * from "package" where "packagecountry" like '%'||#{param1}||'%'
+	</select>
+	
+	<select id="packisLiked" resultType="int" parameterType="map">
+	  select case when count(*) > 0 then 1 else 0 end
+	  from "like"
+	  where "id" = #{param1} and "packagenum" = #{param2}
+	</select>
+	
+	<insert id="palike">
+		insert into "like" values(#{param1},0,#{param2},0,1)
+	</insert>
+	
+	<delete id="padellike">
+		delete from "like" where "id"=#{param1} and "packagenum"=#{param2}
+	</delete>
+	
+	<select id="packtotal" resultType="int">
+		select count(*) from "package"
+	</select>
+	
+	<select id="packsertotal" resultType="int">
+		select count(*) from "package" where "packagecountry"=#{param1}
+	</select>
+	
+	<select id="packsearchtotal" resultType="int">
+		select count(*) from "package" where "packagecountry" like '%${param1}%' and "packageday"=#{param2}
+	</select>
+	
+	
+	
+	
+</mapper>

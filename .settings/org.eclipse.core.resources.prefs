@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/mbc/ontrip/flight/CsvReaderService.java=UTF-8
+encoding//src/main/java/com/mbc/ontrip/flight/FlightController.java=UTF-8
+encoding//src/main/java/com/mbc/ontrip/flight/FlightPageDTO.java=UTF-8
+encoding//src/main/java/com/mbc/ontrip/hotel/CsvHotelService.java=UTF-8
+encoding//src/main/java/com/mbc/ontrip/hotel/HotelPageDTO.java=UTF-8
+encoding//src/main/java/com/mbc/ontrip/qna/QnaPageDTO.java=UTF-8
+encoding//src/main/java/com/mbc/ontrip/weather/WeatherController.java=UTF-8
+encoding//src/main/webapp/WEB-INF/views/map/map.jsp=UTF-8

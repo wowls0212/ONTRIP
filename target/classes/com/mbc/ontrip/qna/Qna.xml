@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mbc.ontrip.qna.QnaService">
+
+    
+    <insert id="insert">
+    	 insert into "qna" values(qna_seq.nextval,#{param1},#{param2},#{param3},#{param4},#{param5})
+    </insert>
+	
+	<select id="qnaout" resultType="com.mbc.ontrip.qna.QnaDTO">
+		select * from(
+			select rownum rn, A.* from(
+				select * from "qna" order by "qnanum" desc
+				) A
+		) where rn between #{start} and #{end}      
+	</select>
+	
+	<select id="qnadetail" resultType="com.mbc.ontrip.qna.QnaDTO">
+	  	 select * from "qna" where "qnanum"=#{param1}
+	</select>
+	
+	<select id="ans" resultType="com.mbc.ontrip.qna.QnaDTO">
+		select * from "answer" where "qnanum"=#{parma1}
+	</select>
+	
+	<insert id="answer">
+		insert into "answer" values(ans_seq.nextval, #{param3},#{param2},#{param1})
+	</insert>
+	
+	<select id="qnaserch" resultType="com.mbc.ontrip.qna.QnaDTO">
+ 		 SELECT * FROM "qna" where "${param1}" like '%'||#{param2}||'%'
+	</select>
+	
+	<select id="qnapw" resultType="com.mbc.ontrip.qna.QnaDTO">
+		select * from "qna" where "qnanum"=#{param1}
+	</select>
+	
+	<delete id="qnadelete">
+		delete from "qna" where  "qnanum"=#{param1}
+	</delete>
+	
+	<select id="updateview" resultType="com.mbc.ontrip.qna.QnaDTO">
+		select * from "qna" where "qnanum"=#{param1}
+	</select>
+		
+	<update id="upsave">
+		update "qna" set "qnatitle"=#{param1}, "qnadetail"=#{param2}, "qnapw"=#{param3} where "qnanum"=#{param4}
+	</update>
+	
+	<select id="adminupdateview" resultType="com.mbc.ontrip.qna.QnaDTO">
+		select * from "answer" where "answernum"=#{param1}
+	</select>
+	
+	<update id="adminupdatesave">
+		update "answer" set "answer"=#{param2} where "answernum"=#{param1}
+	</update>
+	
+	<select id="qnatotal" resultType="int">
+		select count(*) from "qna"
+	</select>
+	
+	<select id="idtotal" resultType="int">
+		select count(*) from "qna" where "userid" = #{param1}
+	</select>
+	
+	<select id="qnaidout" resultType="com.mbc.ontrip.qna.QnaDTO">
+		select * from "qna" where "userid" = #{param1} order by "qnanum" desc
+	</select>
+	
+</mapper>

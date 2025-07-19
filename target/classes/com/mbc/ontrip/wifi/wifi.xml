@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mbc.ontrip.wifi.WifiService">
+	<insert id="wifiin">
+		insert into "wifi" values(wifi_seq.nextval,#{param1},#{param2},#{param3},#{param4},#{param5},#{param6})
+	</insert>
+	
+	<select id=""></select>
+	
+	<select id="wifiout" resultType="com.mbc.ontrip.wifi.WIfiDTO">
+		select * from(
+			select rownum rn, A.* from(
+				select * from "wifi" 
+				) A
+		) where rn between #{start} and #{end}
+	</select>
+	
+	<delete id="wifidel">
+		delete from "wifi" where "wifinum"=#{param1}
+	</delete>
+	
+	<select id="wifiupdateview" resultType="com.mbc.ontrip.wifi.WIfiDTO">
+		select * from "wifi" where "wifinum"=#{param1}
+	</select>
+	
+	<update id="wifiup">
+		update "wifi" set
+		"wifiname"=#{param2},
+		"wifidetail"=#{param3},
+		"wifilink"=#{param4},
+		"wificountry"=#{param5},
+		"wifiday"=#{param6},
+		"wifiimg"=#{param7}
+		where "wifinum"=#{param1}
+	</update>
+	
+	<select id="wificountry" resultType="com.mbc.ontrip.wifi.WIfiDTO">
+		select * from "wifi" where "wificountry"=#{param1}
+	</select>
+	
+	<select id="search" resultType="com.mbc.ontrip.wifi.WIfiDTO">
+		select * from "wifi" where "wificountry" like '%${param1}%' and "wifiday"=#{param2}
+	</select>
+	
+	<select id="mainsearch" resultType="com.mbc.ontrip.wifi.WIfiDTO">
+		select * from "wifi" where "wificountry" like '%'||#{param1}||'%'
+	</select>
+	
+	<select id="wifiisLiked" resultType="int" parameterType="map">
+	  select case when count(*) > 0 then 1 else 0 end
+	  from "like"
+	  where "id" = #{param1} and "wifinum" = #{param2}
+	</select>
+	
+	<insert id="wlike">
+		insert into "like" values(#{param1},#{param2},0,0,1)
+	</insert>
+	
+	<delete id="wdellike">
+		delete from "like" where "id"=#{param1} and "wifinum"=#{param2}
+	</delete>
+	
+	<select id="wifitotal" resultType="int">
+		select count(*) from "wifi"
+	</select>
+	
+	<select id="wifisertotal" resultType="int">
+		select count(*) from "wifi" where "wificountry"=#{param1}
+	</select>
+	
+	<select id="wifisearchtotal" resultType="int">
+		select count(*) from "wifi" where "wificountry" like '%${param1}%' and "wifiday"=#{param2}
+	</select>
+	
+	<select id="getLikedWifiNums" resultType="com.mbc.ontrip.wifi.WIfiDTO">
+		select "wifinum" from "like" where "id"=#{param1}
+	</select>
+	
+</mapper>

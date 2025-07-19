@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mbc.ontrip.map.UserPlaceService">
+	<insert id="insertPlace">
+		insert into "userplace" (
+    "usernumber", "userid", "placename", "address", "phone", "lat", "lng", "regdate", "placeorder"
+  ) values (
+    userplace_seq.nextval,
+    #{userid}, #{placename}, #{address}, #{phone},
+    #{lat}, #{lng}, DEFAULT, #{placeorder}
+  )
+
+	</insert>
+	
+	<update id="updatePlaceOrder">
+		update "userplace" set placeorder=#{param3} where userid=#{param1} and placename=#{param2}
+	</update>
+	
+	<select id="getPlacesByUser" resultType="com.mbc.ontrip.map.UserPlaceDTO">
+		  select * from "userplace"
+		  where "userid" = #{userid}
+		  order by "placeorder"
+	</select>
+
+</mapper>

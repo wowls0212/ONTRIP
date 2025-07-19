@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.mbc.ontrip.country.CountryService">
+	<insert id="csave">
+		insert into "country" values(trip_seq.nextval,#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9})
+	</insert>
+	
+	<select id="out" resultType="com.mbc.ontrip.country.CountryDTO">
+		select * from(
+			select rownum rn, A.* from(
+				select * from "country" order by "countrynum" desc
+				) A
+		) where rn between #{start} and #{end}
+	</select>
+	
+	<select id="cdetail" resultType="com.mbc.ontrip.country.CountryDTO">
+		select * from "country" where "countrynum"=#{param1}
+	</select>
+	
+	<select id="cupdateview" resultType="com.mbc.ontrip.country.CountryDTO">
+		select * from "country" where "countrynum"=#{param1}
+	</select>
+	
+	<select id="consearch" resultType="com.mbc.ontrip.country.CountryDTO">    
+    select * from(
+			select rownum rn, A.* from(
+				select * from "country" where "country" like '%'||#{search}||'%' or "tripname" like '%'||#{search}||'%'
+				order by "countrynum" desc
+				) A
+		) where rn between #{start} and #{end}
+	</select>
+	
+	<select id="mainsearch" resultType="com.mbc.ontrip.country.CountryDTO">
+		select * from "country" where "country" like '%'||#{param1}||'%' or "tripname" like '%'||#{param1}||'%'
+	</select>
+	
+	<select id="countryser" resultType="com.mbc.ontrip.country.CountryDTO">					
+		select * from "country" where "tripstyle" like '%'||#{param1}||'%'
+	</select>
+
+	<select id="month" resultType="com.mbc.ontrip.country.CountryDTO">
+		select * from (
+			select * from "country" where "branch"=#{param1} order by "countrynum" desc)
+			where rownum between 1 and 6
+	</select>
+	
+	<insert id="like">
+		insert into "like" values(#{param1},0,0,#{param2},1)
+	</insert>
+	
+	<delete id="dellike">
+		delete from "like" where "id"=#{param1} and "countrynum"=#{param2}
+	</delete>
+	
+	<select id="isLiked" resultType="int" parameterType="map">
+	  select case when count(*) > 0 then 1 else 0 end
+	  from "like"
+	  where "id" = #{param1} and "countrynum" = #{param2}
+	</select>
+	
+	<select id="countrytotal" resultType="int">
+		select count(*) from "country"
+	</select>
+	
+	<select id="countrysearchtotal" resultType="int">
+		select count(*) from "country" where "country" like '%'||#{param1}||'%' or "tripname" like '%'||#{param1}||'%'
+	</select>
+	
+	<select id="countrysertotal" resultType="int">
+		select count(*) from "country" where "tripstyle" like '%'||#{param1}||'%'
+	</select>
+	
+	<select id="branchtotal" resultType="int">
+		select count(*) from "country" where "branch" =#{param1}
+	</select>
+	
+	<select id="branchser" resultType="com.mbc.ontrip.country.CountryDTO">					
+		select * from "country" where "branch" =#{param1}
+	</select>
+	
+	<select id="likeCountry" resultType="com.mbc.ontrip.country.CountryDTO">
+		select 
+		  c."countrynum",
+		  c."country",
+		  c."tripname",
+		  c."address",
+		  c."tripimg",
+		  c."tripstyle",
+		  c."branch",
+		  count(l."countrynum") as like_count
+		from "country" c
+		join "like" l on c."countrynum" = l."countrynum"
+		group by
+		  c."countrynum",
+		  c."country",
+		  c."tripname",
+		  c."address",
+		  c."tripimg",
+		  c."tripstyle",
+		  c."branch"
+		order by like_count DESC
+	</select>
+	
+	<select id="contotal" resultType="int">
+		select count(*) from "country" where "country"=#{param1}
+	</select>
+	
+	<select id="con" resultType="com.mbc.ontrip.country.CountryDTO">					
+		select * from "country" where "country" =#{param1}
+	</select>
+	
+	<update id="cupdatesave">
+		update "country" set 
+		"country"=#{param2},
+		"tripname"=#{param3},
+		"tripimg"=#{param4},
+		"lat"=#{param5},
+		"llong"=#{param6},
+		"address"=#{param7},
+		"tripstyle"=#{param8},
+		"branch"=#{param9},
+		"tripdetail"=#{param10}
+		where "countrynum"=#{param1}
+	</update>
+	
+	<delete id="condel">
+		delete from "country" where "countrynum"=#{param1}
+	</delete>
+	
+	
+</mapper>

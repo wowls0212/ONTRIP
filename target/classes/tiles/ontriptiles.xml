@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+   <definition name="baseLayout" template="/WEB-INF/views/layout.jsp">
+      <put-attribute name="title" value=""/>
+      <put-attribute name="top" value="/WEB-INF/views/top.jsp"/>
+      <put-attribute name="body" value=""/>
+      <put-attribute name="footer" value="/WEB-INF/views/footer.jsp"/>
+   </definition>
+	<!-- 메인화면 -->  
+   <definition name="main" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/main.jsp"/>
+   </definition>
+   
+   <!-- 회원가입 -->
+	<definition name="userinput" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/user/userinput.jsp"/>
+   </definition>
+   
+   <!-- 회원출력 -->
+   <definition name="userout" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/user/userout.jsp"/>
+   </definition>
+   
+   <!-- 화원정보수정view -->
+   <definition name="userupdateview" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/user/userupdateview.jsp"/>
+   </definition>
+   <!-- 로그인화면 -->
+   <definition name="login" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/login/login.jsp"/>
+   </definition>
+   
+   <!-- 비밀번호찾기 -->
+   <definition name="passwordfind" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/login/passwordfind.jsp"/>
+   </definition>
+   
+   <!-- 비밀번호리셋 -->
+   <definition name="passwordreset" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/login/passwordreset.jsp"/>
+   </definition>
+   
+   <!-- 마이페이지 -->
+ 	<definition name="mypage" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/user/mypage.jsp"/>
+   </definition>
+   
+    <!-- 좋아요페이지 -->
+ 	<definition name="likepage" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/user/likepage.jsp"/>
+   </definition>
+   
+   <!-- 마이페이지 -->
+ 	<definition name="pwcheck" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/user/pwcheck.jsp"/>
+   </definition>
+   
+   
+   
+   <!-- 어행국가등록 -->
+   <definition name="countryinput" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/country/countryinput.jsp"/>
+   </definition>
+   
+      <!-- 어행국가조회 -->
+   <definition name="countryout" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/country/countryout.jsp"/>
+   </definition>
+   
+ 	<!-- 어행국가상세보기 -->
+   <definition name="countrydetail" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/country/countrydetail.jsp"/>
+   </definition>
+   
+   <!-- 어행국가수정 -->
+   <definition name="countryupdateview" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/country/countryupdateview.jsp"/>
+   </definition>
+   
+   <!-- wifi등록 -->
+   <definition name="wifiinput" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/wifi/wifiinput.jsp"/>
+   </definition>
+   
+   <!-- wifi출력 -->
+   <definition name="wifiout" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/wifi/wifiout.jsp"/>
+   </definition>
+   
+   <!-- wifi검색 -->
+   <definition name="wifisearch" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/wifi/wifisearch.jsp"/>
+   </definition>
+   
+   <!-- wifi수정 -->
+   <definition name="wifiupdateview" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/wifi/wifiupdateview.jsp"/>
+   </definition>
+   
+   <!-- package출력 -->
+   <definition name="packout" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/pack/packout.jsp"/>
+   </definition>
+   
+   <!-- package입력 -->
+   <definition name="packinput" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/pack/packinput.jsp"/>
+   </definition>
+   
+   <!-- package검색 -->
+   <definition name="packsearch" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/pack/packsearch.jsp"/>
+   </definition>
+   
+   <!-- package수정 -->
+   <definition name="packupdateview" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/pack/packupdateview.jsp"/>
+   </definition>
+   
+   <!-- qna입력 -->
+   <definition name="qnainput" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/qna/qnainput.jsp"/>
+   </definition>
+   
+   <!-- qna출력 -->
+   <definition name="qnaout" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/qna/qnaout.jsp"/>
+   </definition>
+   
+   <!-- qna출력 -->
+   <definition name="myqnaout" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/qna/myqnaout.jsp"/>
+   </definition>
+   
+   <!-- qna상세보기 -->
+   <definition name="qnadetail" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/qna/qnadetail.jsp"/>
+   </definition>
+   
+   <!-- qna수정 -->
+   <definition name="qnaupdateview" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/qna/qnaupdateview.jsp"/>
+   </definition>
+   
+      <!-- answer수정 -->
+   <definition name="answerupdateview" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/qna/answerupdateview.jsp"/>
+   </definition>
+   
+    <!-- 지도 -->
+   <definition name="map" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/map/map.jsp"/>
+   </definition>
+   
+       <!-- 전체검색 -->
+   <definition name="mainsearch" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/search/mainsearch.jsp"/>
+   </definition>
+   
+    <!-- 날씨 -->
+   <definition name="weather" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/weather/weather.jsp"/>
+   </definition>
+   
+    <!-- 항공권 -->
+   <definition name="flights" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/flight/flights.jsp"/>
+   </definition>
+   
+   <!-- 호텔 -->
+   <definition name="hotels" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/hotel/hotels.jsp"/>
+   </definition>
+   
+      
+</tiles-definitions>
