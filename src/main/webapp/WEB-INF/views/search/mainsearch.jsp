@@ -66,7 +66,7 @@ body::before {
   margin: 6px 0;
   line-height: 1.4;
 }
-/* .card.default는 .card에 통합되었음 */
+
 
 .travel-wrapper {
   position: relative;
@@ -104,7 +104,7 @@ body::before {
 .travel-prev { margin-right: 10px; }
 .travel-next { margin-left: 10px; }
 
-/* 패키지 & wifi wrapper */
+
 .sim-wrapper, .wifi-wrapper {
   position: relative;
   display: flex;
@@ -113,7 +113,7 @@ body::before {
   margin: 0 20px 20px 20px;
 }
 
-/* slider */
+
 .sim-slider, .wifi-slider {
   display: flex;
   gap: 10px;
@@ -122,7 +122,7 @@ body::before {
   scrollbar-width: none;
   -ms-overflow-style: none;
   flex-wrap: nowrap;
-  width: calc(260px * 5 + 10px * 4); /* 카드 5개 + gap */
+  width: calc(260px * 5 + 10px * 4); 
 }
 .sim-slider::-webkit-scrollbar,
 .wifi-slider::-webkit-scrollbar {
@@ -186,7 +186,7 @@ body::before {
     </div>
     </form>
    </div>
-<!-- 여행지 carousel -->
+<!-- 여행지  -->
 <div class="section-title">여행지</div>
 <div class="travel-wrapper">
   <button class="travel-prev" onclick="prevTravelSlide()">❮</button>
@@ -295,36 +295,31 @@ body::before {
 document.addEventListener('DOMContentLoaded', function() {
     const travelSlider = document.getElementById('travelSlider');
 
-    // 여행지 슬라이더 다음으로 이동하는 함수
     window.nextTravelSlide = function() {
-      if (!travelSlider) return; // travelSlider가 없으면 함수 종료
+      if (!travelSlider) return; 
 
       const card = travelSlider.querySelector('.card');
-      if (!card) return; // 카드가 없으면 함수 종료
+      if (!card) return; 
 
       const maxScrollLeft = travelSlider.scrollWidth - travelSlider.clientWidth;
-      // 현재 스크롤 위치가 끝에 가까우면 처음으로 돌아감 (무한 루프)
       if (travelSlider.scrollLeft >= maxScrollLeft - card.offsetWidth) {
         travelSlider.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        // 카드 너비 + gap(10px)만큼 스크롤 (gap은 CSS에서 10px로 설정되어 있음)
         travelSlider.scrollBy({ left: card.offsetWidth + 10, behavior: 'smooth' });
       }
     };
 
-    // 여행지 슬라이더 이전으로 이동하는 함수
     window.prevTravelSlide = function() {
-      if (!travelSlider) return; // travelSlider가 없으면 함수 종료
+      if (!travelSlider) return; 
 
       const card = travelSlider.querySelector('.card');
-      if (!card) return; // 카드가 없으면 함수 종료
+      if (!card) return; 
 
-      // 현재 스크롤 위치가 처음이면 끝으로 돌아감 (무한 루프)
+ 
       if (travelSlider.scrollLeft <= 0) {
         const maxScrollLeft = travelSlider.scrollWidth - travelSlider.clientWidth;
         travelSlider.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
       } else {
-        // 카드 너비 + gap(10px)만큼 스크롤 (gap은 CSS에서 10px로 설정되어 있음)
         travelSlider.scrollBy({ left: -(card.offsetWidth + 10), behavior: 'smooth' });
       }
     };

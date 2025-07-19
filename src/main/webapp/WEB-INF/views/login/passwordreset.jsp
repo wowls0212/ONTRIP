@@ -26,7 +26,6 @@
        margin-bottom: 250px;
     }
 
-    /* 섹션 헤더 */
     .section-header {
       text-align: center;
       margin-bottom: 32px;
@@ -45,7 +44,6 @@
       vertical-align: middle;
     }
 
-    /* 카드 박스 */
     .card {
       background: #fff;
       padding: 28px;
@@ -77,7 +75,6 @@
       box-sizing: border-box;
     }
 
-    /* 버튼 그룹 */
     .button-group {
       text-align: center;
     }
@@ -100,7 +97,6 @@
       color: #333;
     }
 
-    /* 에러 메시지 */
     .error {
       color: #d9534f;
       text-align: center;
@@ -115,12 +111,10 @@
 
   <div class="container">
 
-    <!-- 에러 메시지 -->
     <c:if test="${not empty msg}">
       <div class="error">${msg}</div>
     </c:if>
 
-    <!-- 재설정 폼 카드 -->
     <div class="card">
       <form action="passwordresetProcess" method="post">
         <input type="hidden" name="id" value="${dto.id}">

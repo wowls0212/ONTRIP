@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <title>ONTRIP</title>
   <style>
-/* footer 전체 */
+
 #fot {
 	background-color: #e0e0e0;
 	color: #black;
@@ -15,7 +15,7 @@
 	font-family: 'Malgun Gothic', Arial, sans-serif;
 	padding: 20px 0;
 }
-/* 가운데 컨테이너 */
+
 #fot .inner {
 	width: 90%;
 	max-width: 1200px;
@@ -31,14 +31,14 @@
 }
 
 #fot .footer-top img {
-	height: 50px; /* ← 여기서 로고 키움 */
+	height: 50px; 
 	width: auto;
 }
 
 #fot .footer-top nav {
 	display: flex;
 	gap: 24px;
-	margin-top: 1px; /* 로고와 링크 사이 공간 */
+	margin-top: 1px; 
 	font-size: 14px;
 	white-space: nowrap;
 }
@@ -52,20 +52,20 @@
 	text-decoration: underline;
 }
 
-/* 하단: 사업자 정보 */
+
 #fot .footer-info {
 	display: grid;
-	grid-template-columns: max-content auto; /* 라벨 칸 / 값 칸 */
-	column-gap: 8px; /* 라벨과 값 사이 */
-	row-gap: 4px; /* 항목 간 세로 간격 */
-	margin-top: 8px; /* 링크 아래 여백 */
+	grid-template-columns: max-content auto; 
+	column-gap: 8px; 
+	row-gap: 4px;
+	margin-top: 8px; 
 	font-size: 13px;
 	line-height: 1.5;
-	justify-items: start; /* 그리드 아이템 좌측 정렬 */
+	justify-items: start; 
 }
 
 #fot .footer-info .label {
-	text-align: left; /* 좌측 정렬로 변경 */
+	text-align: left; 
 	opacity: 0.8;
 	color: black;
 }

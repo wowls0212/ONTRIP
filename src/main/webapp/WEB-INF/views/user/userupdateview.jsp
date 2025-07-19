@@ -115,10 +115,8 @@
 
 <body>
 <div class="box">
-  <!-- 박스 내부에 제목 -->
   <div class="box-title">회원정보 수정</div>
   
-  <!-- X 버튼 -->
   <button type="button" class="close-btn" onclick="location.href='userout'">&times;</button>
 
   <form action="userupdate">

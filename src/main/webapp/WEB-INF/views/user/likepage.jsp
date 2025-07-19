@@ -50,7 +50,6 @@ button:hover {
   box-shadow: 0 8px 20px rgba(139,195,74,0.4);
 }
 
-/* 구분 카드 박스 */
 .section-box {
   max-width: 1000px;
   margin: 30px auto;
@@ -65,19 +64,18 @@ button:hover {
   font-size: 22px;
   color: #333;
   font-weight: 800;
-  text-align: left; /* 왼쪽 정렬 추가 */
+  text-align: left; 
   border-left: 6px solid #8BC34A;
   padding-left: 12px;
 }
 
-/* 전체 리스트 래퍼 */
+
 .like-list-wrapper {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* 헤더 */
 .like-list-header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -89,7 +87,7 @@ button:hover {
   border-radius: 12px;
 }
 
-/* 각 행 */
+
 .like-list-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -105,7 +103,7 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* 컬럼 내부 */
+
 .like-list-row .col,
 .like-list-header .col {
   font-size: 14px;
@@ -115,7 +113,7 @@ button:hover {
   justify-content: center;
 }
 
-/* 이미지 스타일 */
+
 .like-list-row img {
   border-radius: 8px;
   width: 140px;
@@ -123,7 +121,7 @@ button:hover {
   max-height: 100px;
 }
 
-/* 공지 텍스트 */
+
 .no-like-list {
   padding: 20px;
   text-align: center;
@@ -168,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
     packageSection.style.display = "block";
   });
 
-  btnAll.click(); // 로딩 시 전체 보기
+  btnAll.click(); 
 });
 </script>
 

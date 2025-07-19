@@ -52,7 +52,7 @@
       border-radius: 10px;
       font-size: 15px;
       outline: none;
-      background-color: #f0f8ff; /* 연한 파란색 */
+      background-color: #f0f8ff;
     }
     .form-group input:focus,
     .form-group select:focus,

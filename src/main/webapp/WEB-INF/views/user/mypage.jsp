@@ -61,7 +61,7 @@ h2::after {
   border-radius: 3px;
 }
 
-/* ===== 프로필 박스 ===== */
+
 .profile-box {
   background: rgba(255,255,255,0.85);
   border-radius: 20px;
@@ -102,7 +102,7 @@ h2::after {
   background: #eefae5;
 }
 
-/* 버튼 */
+
 .btn {
   font-size: 17px;
   font-weight: bold;

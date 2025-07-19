@@ -18,7 +18,6 @@ public class FlightPageDTO {
         this.cntPerPage = cntPerPage;
         this.start = (nowPage - 1) * cntPerPage;
         this.lastPage = (int) Math.ceil((double) total / cntPerPage);
-     // ✨ 10개씩 페이지 묶기
         int pageGroup = (int) Math.ceil((double) nowPage / 10);
         this.endPage = pageGroup * 10;
         this.startPage = endPage - 9;

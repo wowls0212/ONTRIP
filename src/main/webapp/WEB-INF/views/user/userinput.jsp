@@ -129,7 +129,7 @@
   transition: all 0.3s ease;
 }
 .btn-selected {
-  background-color: #8BC34A!important; /* 연두색 */
+  background-color: #8BC34A!important; 
   color: white !important;
 }
 .btn-user:hover, .btn-admin:hover
@@ -138,10 +138,8 @@
 	
 	<script>
 	function selectUser(type) {
-		  // 선택한 사용자 값을 숨은 input에 반영
 		  document.getElementById('role').value = type;
 
-		  // adminPasswordRow 표시 제어
 		  const adminRow = document.getElementById("adminPasswordRow");
 		  if (type === 'admin') {
 		    adminRow.style.display = 'table-row';
@@ -149,7 +147,6 @@
 		    adminRow.style.display = 'none';
 		  }
 
-		  // 버튼 스타일 변경
 		  document.querySelectorAll('.btn-user, .btn-admin').forEach(btn => {
 		    btn.classList.remove('btn-selected');
 		  });

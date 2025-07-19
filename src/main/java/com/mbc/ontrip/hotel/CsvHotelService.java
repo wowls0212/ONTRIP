@@ -18,7 +18,7 @@ public class CsvHotelService {
             while ((line = br.readLine()) != null) {
                 if (first) { first = false; continue; }
 
-                String[] c = splitCSVLine(line);  // ✅ 커스텀 파서 사용
+                String[] c = splitCSVLine(line);
                 if (c.length < 7) continue;
 
                 HotelInfo h = new HotelInfo();
@@ -41,7 +41,6 @@ public class CsvHotelService {
         return list;
     }
 
-    // 🔧 따옴표로 감싼 필드도 안전하게 분리
     private String[] splitCSVLine(String line) {
         List<String> tokens = new ArrayList<>();
         StringBuilder sb = new StringBuilder();
@@ -58,7 +57,7 @@ public class CsvHotelService {
                 sb.append(c);
             }
         }
-        tokens.add(sb.toString().trim()); // 마지막 필드 추가
+        tokens.add(sb.toString().trim());
         return tokens.toArray(new String[0]);
     }
 

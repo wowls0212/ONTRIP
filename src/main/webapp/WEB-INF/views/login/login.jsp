@@ -23,7 +23,6 @@
        margin-bottom: 150px;
     }
 
-    /* 섹션 헤더 */
     .section-header {
       text-align: center;
       margin-bottom: 32px;
@@ -42,7 +41,6 @@
       vertical-align: middle;
     }
 
-    /* 카드 박스 */
     .card {
       margin: 20px;
       background: #fff;
@@ -75,7 +73,6 @@
       box-sizing: border-box;
     }
 
-    /* 버튼 그룹 */
     .button-group {
       text-align: center;
     }
@@ -109,12 +106,10 @@
 </head>
 <body>
   <div class="container">
-    <!-- 섹션 헤더 -->
     <div class="section-header">
 		 <h2>로그인</h2>
     </div>
 
-    <!-- 로그인 카드 -->
     <div class="card">
       <form action="logincheck" method="post">
         <table>
@@ -131,7 +126,7 @@
         <div class="button-group">
           <input type="submit" value="로그인" class="btn-login">
           <input type="button" value="비밀번호 찾기" class="btn-cancel"
-                 onclick="location.href='passwordfind';">     <!--취소 x 비밀번호 찾기로 다른분들 수정해야될곳 -->
+                 onclick="location.href='passwordfind';">   
         </div>
       </form>
     </div>

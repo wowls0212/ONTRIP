@@ -83,7 +83,7 @@ button:active, a:active, .box:active, .icon-item:active {
 
          document.addEventListener('mousemove', function(e) {
            moveCount++;
-           if (moveCount % 5 !== 0) return;  // 🔥 5번에 한번만 실행
+           if (moveCount % 5 !== 0) return;  
 
            const circle = document.createElement('div');
            circle.style.position = 'fixed';

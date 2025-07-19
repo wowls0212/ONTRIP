@@ -88,7 +88,7 @@
       height: 16px;
     }
 
-    /* 수정 삭제 버튼 스타일 */
+   
     .updel {
       text-align: center;
       padding: 12px;

@@ -109,7 +109,7 @@
  .trip-info .address-line {
   display: flex;
   align-items: center;
-  justify-content: center; /* 추가! */
+  justify-content: center; 
   margin: 8px 0;
   font-size: 15px;
   color: #555;

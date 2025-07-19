@@ -114,7 +114,6 @@
 <h2 class="title">여행지 수정</h2>
 
 <div class="main-card">
-  <!-- X 버튼 -->
   <button type="button" class="close-btn" onclick="location.href='main'">&times;</button>
 
   <form action="countryupdatesave" method="post" enctype="multipart/form-data" class="info-box">

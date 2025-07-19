@@ -32,22 +32,20 @@
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: rgba(255, 255, 255, 0.7); /* 밝은 오버레이 */
+    background-color: rgba(255, 255, 255, 0.7); 
     z-index: 1;
   }
 
-  /* 메인 타이틀 */
   .main-banner h1 {
     position: relative;
     z-index: 2;
     font-size: 52px;
     font-weight: 900;
-    color: #ffffff;  /* 상단바와 같은 파랑 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  /* 자연스러운 그림자 */
+    color: #ffffff;  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  
     margin-bottom: 20px;
   }
 
-  /* 서브 텍스트 */
   .main-banner p {
     position: relative;
     z-index: 2;
@@ -57,7 +55,6 @@
     margin-bottom: 40px;
   }
 
-  /* 검색창 */
   .search-box {
     position: relative;
     z-index: 2;
@@ -106,7 +103,7 @@
 .category-icons {
   display: flex;
   justify-content: center;
-  gap: 80px; /* 아이콘 간 간격 */
+  gap: 80px; 
   margin-top: 1px;
   flex-wrap: wrap;
 }
@@ -120,7 +117,7 @@
 .icon-item img {
   width: 70px;
   height: 70px;
-  object-fit: contain; /* 이미지 비율 유지 */
+  object-fit: contain; 
   margin-bottom: 10px;
 }
 
@@ -159,11 +156,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: opacity 0.3s ease;  /* ✨ 부드럽게 전환 */
+  transition: opacity 0.3s ease;  
 }
 
 .slide img:hover {
-  opacity: 0.7; /* ✨ 마우스 올렸을 때 약간 흐려짐 */
+  opacity: 0.7; 
 }
 
 
@@ -198,16 +195,16 @@
   align-items: center;
   overflow: inherit;
   justify-content: center;
-  margin-bottom: 70px; /* ✅ 여백 줄이기 */
+  margin-bottom: 70px; 
 }
 
 
   #myCarousel {
   width: 1300px;
   height: 250px;
-  margin: 0 auto; /* 가운데 정렬 */
-  overflow: hidden; /* 혹시 이미지가 넘치지 않도록 */
-  border-radius: 12px; /* 선택 사항: 둥근 모서리 */
+  margin: 0 auto;
+  overflow: hidden; 
+  border-radius: 12px; 
 }
 
 .carousel-inner {
@@ -221,7 +218,7 @@
 .carousel-inner .item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 잘리는 영역 없이 비율 유지 */
+  object-fit: cover; 
 }
    
    
@@ -285,13 +282,13 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: none;        /* ✅ 배경 없애기 */
-  color: #184fa1;          /* ✅ 화살표 색 */
-  border: none;            /* ✅ 테두리 제거 */
-  font-size: 24px;         /* ✅ 크기 키우고 */
-  width: auto;             /* ✅ 너비 자동 */
-  height: auto;            /* ✅ 높이 자동 */
-  box-shadow: none;        /* ✅ 그림자 제거 */
+  background: none;        
+  color: #184fa1;        
+  border: none;           
+  font-size: 24px;        
+  width: auto;             
+  height: auto;            
+  box-shadow: none;       
   cursor: pointer;
   z-index: 10;
 }
@@ -303,7 +300,7 @@
 .recommend-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;  /* ✅ footer와 간격 */
+  margin-bottom: 80px;  
 }
 
 .recommend-slider {
@@ -315,7 +312,7 @@
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   padding: 0;
-  padding-bottom: 70px; /* ✅ 아래 패딩을 줘야 그림자 안 잘림 */
+  padding-bottom: 70px; 
 }
 
 .recommend-slider::-webkit-scrollbar {
@@ -323,7 +320,7 @@
 }
 
 .recommend-slide {
-  flex: 0 0 240px; /* 고정 너비로 카드 5개 정렬 */
+  flex: 0 0 240px; 
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -350,28 +347,28 @@
 
 
 
-/* ✅ 반응형 */
+
 @media (max-width: 1200px) {
   .recommend-slide {
-    flex: 0 0 calc(25% - 16px); /* 4개 */
+    flex: 0 0 calc(25% - 16px); 
   }
 }
 
 @media (max-width: 900px) {
   .recommend-slide {
-    flex: 0 0 calc(33.33% - 16px); /* 3개 */
+    flex: 0 0 calc(33.33% - 16px); 
   }
 }
 
 @media (max-width: 600px) {
   .recommend-slide {
-    flex: 0 0 calc(50% - 16px); /* 2개 */
+    flex: 0 0 calc(50% - 16px); 
   }
 }
 
 @media (max-width: 400px) {
   .recommend-slide {
-    flex: 0 0 100%; /* 1개 */
+    flex: 0 0 100%; 
   }
 }
 

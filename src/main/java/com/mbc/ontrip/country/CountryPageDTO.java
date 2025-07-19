@@ -17,12 +17,10 @@ public class CountryPageDTO {
 		   calcStartEnd(getNowPage(), getCntPerPage());              
 	}
 	
-	// 전체 페이지 수
 	public void calcLastPage(int total, int cntPerPage) {
 	   setLastPage((int) Math.ceil((double)total / (double)cntPerPage)); 
 	}   
-	
-	//시작페이지와 끝 페이지 	
+		
 	public void calcStartEndPage(int nowPage, int cntPage) {
 	   setEndPage(((int)Math.ceil((double)nowPage / (double)cntPage)) * cntPage);
 	   if (getLastPage() < getEndPage()) setEndPage(getLastPage());
@@ -31,7 +29,6 @@ public class CountryPageDTO {
 	   if(getStartPage()<1) setStartPage(1);
 	}
 	
-	// DB쿼리에 정의할  start,end 
 	public void calcStartEnd(int nowPage, int cntPerPage) {    
 		setEnd(nowPage * cntPerPage);
 	    setStart(getEnd() - cntPerPage + 1);    

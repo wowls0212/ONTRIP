@@ -16,14 +16,12 @@
   font-size: 28px;
   font-weight: 700;
     }
-    /* 전체 컨테이너 */
     .container {
       max-width: 600px;
       margin: 60px auto;
       padding: 0 20px;
       margin-bottom: 300px;
     }
-    /* 섹션 헤더 */
     .section-header {
       text-align: center;
       margin-bottom: 40px;
@@ -35,7 +33,7 @@
       margin: 0 12px;
       vertical-align: middle;
     }
-    /* 카드 박스 */
+
     .card {
       background: #fff;
       padding: 24px;
@@ -59,7 +57,7 @@
     .card td {
       color: #333;
     }
-    /* 버튼 */
+
     .button-group {
       text-align: center;
       margin-top: 12px;
@@ -81,7 +79,7 @@
       color: #333;
     }
     
-    /* 에러 메시지 */
+
     .alert {
       padding: 16px;
       margin-bottom: 20px;
@@ -102,17 +100,14 @@
 <body>
 
   <div class="container">
-    <!-- 섹션 헤더 -->
     <div class="section-header">
         <h2>비밀번호 확인</h2>
     </div>
 
-    <!-- 에러 메시지 -->
    <c:if test="${not empty msg}">
    <div class="alert">${msg}</div>
    </c:if>
 
-    <!-- 비밀번호 입력 카드 -->
     <div class="card">
       <form action="pwcheck" method="post">
         <input type="hidden" name="type" value="${param.type}">

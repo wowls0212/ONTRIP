@@ -133,7 +133,7 @@ font-style: italic;
   border: 6px solid transparent;
   border-image: linear-gradient(60deg, rgba(180,250,255,0.8), rgba(255,255,255,0.8)) 1;
   transition: right 0.5s ease;
-  padding: 100px 50px 50px 50px; /* 위 padding 늘림 */
+  padding: 100px 50px 50px 50px;
   box-sizing: border-box;
   z-index: 999;
   animation: cloudFloat 4s ease-in-out infinite;
@@ -157,7 +157,7 @@ font-style: italic;
   font-weight: bold;
   font-size: 18px;
   text-shadow: 1px 1px 2px rgba(255,255,255,0.9);
-  display: inline-block; /* transform이 텍스트에 잘 적용되도록 */
+  display: inline-block; 
   transition: color 0.4s ease, transform 0.4s ease;
 }
 #sidebar a:hover {

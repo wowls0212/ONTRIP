@@ -82,7 +82,6 @@
       padding-top: 20px;
       border-bottom: none;
     }
-    /* X 버튼 */
     .close-btn {
       position: absolute;
       top: 12px;
@@ -101,7 +100,6 @@
       outline: none;
       transform: scale(1.2);
     }
-    /* 테이블 내부 타이틀 */
     .table-title {
       text-align: center;
       font-size: 24px;
@@ -114,7 +112,6 @@
 
 <body>
 <div class="box">
-  <!-- X 버튼 -->
   <button type="button" class="close-btn" onclick="location.href='qnaout'">&times;</button>
 
   <form action="answerupdatesave" method="post" enctype="multipart/form-data">

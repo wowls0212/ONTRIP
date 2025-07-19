@@ -26,11 +26,11 @@ h2 {
 .container {
   display: flex;
   gap: 10px;
-  width: calc(100% - 20px); /* 양쪽 끝 여백 20px + 20px */
+  width: calc(100% - 20px); 
   margin: 0 auto;
   padding: 0 10px;
   box-sizing: border-box;
-  margin-bottom: 30px; /* ✅ 여기 추가 */
+  margin-bottom: 30px;
  } 
 .map-wrapper {
   flex: none;
@@ -167,16 +167,16 @@ window.onload = function () {
 
      window.onload = function () {
 
-        // 👉 1. 테이블 드래그 기능 적용
+        //테이블 드래그 기능 적용
         new Sortable(document.querySelector("#searchResults tbody"), {
           animation: 150,
           onEnd: reorderPathFromTable
         });
 
-        // 👉 2. 세션에서 로그인 ID 받아오기
+        //세션에서 로그인 ID 받아오기
         const loginId = "<%= session.getAttribute("id") %>";
 
-        // 👉 3. 저장된 장소 DB에서 불러오기
+        //저장된 장소 DB에서 불러오기
         $.ajax({
           url: "${pageContext.request.contextPath}/getPlaces",
           method: "GET",
@@ -443,7 +443,7 @@ function reorderPathFromTable() {
          }).getLength();
          distanceText = Math.round(dist).toLocaleString() + "m";
        }
-       row.cells[4].textContent = distanceText; // 5번째 셀에 거리 갱신
+       row.cells[4].textContent = distanceText; 
 
        // 마커 재생성
        const markerHtml =

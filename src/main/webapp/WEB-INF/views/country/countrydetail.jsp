@@ -180,7 +180,7 @@
 
     function toggleLike(id, countrynum) {
       if (!id) {
-        alert("로그인 후 이용할 수 있어요 😊");
+        alert("로그인 후 이용할 수 있어요");
         location.href = "/login";
         return;
       }
@@ -195,7 +195,7 @@
             $('#likeBtn').html('<img src="./image/heart2.png" alt="좋아요 취소" width="30" height="30">');
           },
           error: function () {
-            alert('좋아요 취소 중 오류가 발생했어요 😢');
+            alert('좋아요 취소 중 오류가 발생했어요');
           }
         });
       } else {
@@ -208,7 +208,7 @@
             $('#likeBtn').html('<img src="./image/heart1.png" alt="좋아요" width="30" height="30">');
           },
           error: function () {
-            alert('좋아요 등록 중 오류가 발생했어요 😢');
+            alert('좋아요 등록 중 오류가 발생했어요');
           }
         });
       }

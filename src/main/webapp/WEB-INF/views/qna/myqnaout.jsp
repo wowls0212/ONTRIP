@@ -10,7 +10,7 @@
 <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
-      background: linear-gradient(to bottom, #f9fafb, #fdfdfd); /* ✅ 더 부드러운 배경 */
+      background: linear-gradient(to bottom, #f9fafb, #fdfdfd);
       margin: 0;
     }
     h2 {
@@ -31,7 +31,7 @@
 }
     .box {
       max-width: 1000px;
-      background: #ffffffcc; /* ✅ 약간 투명 흰색으로 부드럽게 */
+      background: #ffffffcc; 
       border-radius: 12px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.05);
       padding: 20px;
@@ -46,7 +46,7 @@
       margin-bottom: 20px;
     }
     thead {
-      background-color: #f4f8f3; /* ✅ 연초록계열 테이블 헤더 */
+      background-color: #f4f8f3; 
     }
     th, td {
       padding: 12px 10px;
