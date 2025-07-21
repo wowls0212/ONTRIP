@@ -89,7 +89,7 @@ ONTRIP은 이러한 불편함을 줄이고, 누구나 더 쉽고 가볍게 여�
     이후 링크를 통해 예약사이트로 이동하여 예약을 진행할 수 있습니다.<br>
     크롤링한 사이트 : https://www.google.com/travel/flights ／https://www.google.com/travel
     <h3>날씨</h3>
-    <img width="627" height="811" alt="날씨" src="https://github.com/user-attachments/assets/03cff8bb-9ba5-4099-a2f4-0fc2f43ba6af" /><br>
+    <img width="400" height="600" alt="날씨" src="https://github.com/user-attachments/assets/03cff8bb-9ba5-4099-a2f4-0fc2f43ba6af" /><br>
     날씨는 API를 이용하여 JSON형식으로 데이터를 조회하여 당일부터 7일후까지 날씨예보를 확인할 수 있습니다.<br>
     <h3>여행경로</h3>
     <img width="1200" height="600" alt="지도" src="https://github.com/user-attachments/assets/26857f9c-b2dd-4de2-aaad-6f7332266f17" /><br>
