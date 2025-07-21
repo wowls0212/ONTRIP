@@ -20,7 +20,9 @@
       <tr>
         <th>Profile</th>
         <td>이미지</td>
-        <td>이미지</td>
+        <td>
+          <img src="https://github.com/user-attachments/assets/f62221c0-2a1d-4415-88a4-d11789e95d9c"/>
+        </td>
         <td>이미지</td>
       </tr>
       <tr>
