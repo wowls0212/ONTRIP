@@ -1,5 +1,5 @@
 <html>
-<h1>ONTRIP</h1>
+<h1>✈️ONTRIP</h1>
   <div>
     <h2>프로젝트 소개</h2>
     ONTRIP은 "여행의 모든 것을 한 곳에서"라는 목표로 시작된 프로젝트입니다.
@@ -55,7 +55,7 @@
     </table>
   </div>
   <div>
-    <h2>Tecj Stacks</h2>
+    <h2>🛠️Tech Stacks</h2>
     <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
     <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
     <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
