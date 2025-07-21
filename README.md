@@ -41,7 +41,7 @@
       </tr>
       <tr>
         <th>E-mail</th>
-        <td>tnal920@naver.com</td>
+        <td>tnal092@naver.com</td>
         <td>wowls0212@naver.com</td>
         <td>rjsdk131@naver.com</td>
       </tr>
