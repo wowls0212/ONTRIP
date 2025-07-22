@@ -73,8 +73,8 @@ ONTRIP은 이러한 불편함을 줄이고, 누구나 더 쉽고 가볍게 여�
   <div>
     <h2>ONTRIP 기능 소개</h2>
     <h3>WIFI&패키지</h3>
-    <img width="500" height="700" alt="와이파이상품등록" src="https://github.com/user-attachments/assets/d4e6bad9-79f6-42b9-91f3-f829652e9331" />
-    <img width="500" height="700" alt="패키지상품목록" src="https://github.com/user-attachments/assets/e9a69b9f-3bbb-4fc8-b52d-1df5cb195533" /><br>
+    <img width="400" height="600" alt="와이파이상품등록" src="https://github.com/user-attachments/assets/d4e6bad9-79f6-42b9-91f3-f829652e9331" />
+    <img width="400" height="600" alt="패키지상품목록" src="https://github.com/user-attachments/assets/e9a69b9f-3bbb-4fc8-b52d-1df5cb195533" /><br>
     WIFI&패키지 상품 목록은 국가별 및 일자별로 등록된 상품을 확인하여 보다 편하게 여러 상품들을 비교할 수 있습니다.<br>
     <h3>여행지</h3>
     <img width="700" height="900" alt="여행지목록" src="https://github.com/user-attachments/assets/4adc2a21-3ba3-4cf4-8aea-17351cec6362" /><br>
