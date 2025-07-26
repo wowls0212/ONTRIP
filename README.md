@@ -63,7 +63,6 @@
     <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
     <img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
     <img src="https://img.shields.io/badge/JSON-000000?style=flat-square&logo=json&logoColor=white" width="80" height="45"/>
-    클로링 JSON 추가
   </div>
   <div>
     <h2>기획</h2>
