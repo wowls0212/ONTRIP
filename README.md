@@ -91,7 +91,7 @@
     크롤링한 사이트 : https://www.google.com/travel/flights ／https://www.google.com/travel
     <h3>날씨</h3>
     <img width="400" height="600" alt="날씨" src="https://github.com/user-attachments/assets/03cff8bb-9ba5-4099-a2f4-0fc2f43ba6af" /><br>
-    날씨는 API를 이용하여 JSON형식으로 데이터를 조회하여 당일부터 7일후까지 날씨예보를 확인할 수 있습니다.<br>
+    날씨는 Open-Meteo API를 이용하여 JSON형식으로 데이터를 조회하여 당일부터 7일후까지 날씨예보를 확인할 수 있습니다.<br>
     <h3>여행경로</h3>
     <img width="1200" height="600" alt="지도" src="https://github.com/user-attachments/assets/26857f9c-b2dd-4de2-aaad-6f7332266f17" /><br>
     여행경로는 kakaomap API를 활용하여 여행지를 검색하면 마커를 통해 지도에 표시된 후 테이블과 함께 여행경로를 만들 수 있습니다.
@@ -101,8 +101,7 @@
     좋아요 기능은 WIFI / 패키지 / 여행지에 대해 즐겨찾기 기능으로 게시물을 보며 좋아요 버튼을 누른 게시물을 한번에 확인할 수 있는 기능입니다. 버튼을 통해 WIFI / 패키지 / 여행지 분리하여 조회가 가능합니다.
   </div>
   <div>
-    <h2>ONTRIP 자세히보기</h2>
-    PPT링크 공간간
+
   </div>
 </html>
 
