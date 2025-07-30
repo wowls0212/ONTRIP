@@ -27,7 +27,7 @@
       </tr>
       <tr>
         <th>Profile</th>
-        <td><img src="https://github.com/user-attachments/assets/068dcadf-cca2-48d8-a4e8-75da62fde9a6" width="250px" height="350px"/></td>
+        <td><img src="https://github.com/user-attachments/assets/1af33d55-3fcf-4127-bd81-7370d0c04824" width="250px" height="350px"/></td>
         <td><img src="https://github.com/user-attachments/assets/f62221c0-2a1d-4415-88a4-d11789e95d9c" width="250px" height="350px"/></td>
         <td><img src="https://github.com/user-attachments/assets/00038a1b-b8eb-45a4-a365-13d43468d159" width="250px" height="350px"/></td>
       </tr>
