@@ -162,10 +162,6 @@
                             </c:otherwise>
                         </c:choose>
                     </c:when>
-                    <c:otherwise>
-                        <button type="button" class="btn-submit"
-                            onclick="location.href='qnaupdateview?qnanum=${qdto.qnanum}'">문의글 수정</button>
-                    </c:otherwise>
                 </c:choose>
             </c:if>
             <input type="hidden" name="qnanum" value="${qdto.qnanum}">

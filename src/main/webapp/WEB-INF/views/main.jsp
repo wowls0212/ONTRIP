@@ -535,9 +535,45 @@ function prevSimSlide() {
         </a>
       </c:forEach>
     </div>
-		
 	</div>
 	
+		<!-- ==========여행스타일별 여행지 추천============== -->
+	<c:set var="style">
+		<c:choose>
+			<c:when test="${tripstyle=='activity' }">액티비티</c:when>
+			<c:when test="${tripstyle=='tourist' }">관광지탐방</c:when>
+			<c:when test="${tripstyle=='food' }">맛집탐방</c:when>
+			<c:when test="${tripstyle=='resort' }">휴양지</c:when>
+		</c:choose>
+	</c:set>
+	<c:if test="${loginstate==true }">
+	<div>
+		  
+		 <h2 style="text-align: left; font-size: 28px; font-weight: 600; margin: 0px 0 10px 100px;">
+		  나의 여행 스타일[${style}]에 맞는 추천 여행지
+		</h2>
+		<div class="recommend-slider" id="recommendSlider">
+      <c:forEach items="${constyle}" var="constyle">
+      <a href="countrydetail?countrynum=${constyle.countrynum }">
+       	<div class="recommend-slide"> 
+          <img src="./image/${constyle.tripimg}" width="여행지 이미지">
+          <p>
+          <c:choose>
+          <c:when test="${fn:length(constyle.tripname)>10}">
+          ${constyle.country}, ${fn:substring(constyle.tripname,0,10)}...
+          </c:when>
+          <c:otherwise>
+          ${constyle.country}, ${constyle.tripname}
+          </c:otherwise>
+          </c:choose>
+          </p>
+        </div>
+        </a>
+      </c:forEach>
+    </div>
+	</div>
+	</c:if>
+
 	<section class="event-banner">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">

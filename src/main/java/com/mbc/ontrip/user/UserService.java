@@ -2,6 +2,8 @@ package com.mbc.ontrip.user;
 
 import java.util.ArrayList;
 
+import com.mbc.ontrip.country.CountryDTO;
+
 public interface UserService {
 
 	void usersave(String id, String pw, String phone, String email, String birth, String tripstyle, String admin);
@@ -45,6 +47,8 @@ public interface UserService {
 	int usersearchtotal(String id);
 
 	UserDTO idgetuser(String id);
+
+	UserDTO tripstyle(String userid);
 
 
 }

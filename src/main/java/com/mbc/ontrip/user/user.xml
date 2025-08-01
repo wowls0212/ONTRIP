@@ -88,6 +88,11 @@
 	<select id="usersearchtotal" resultType="int">
 		select count(*) from "ontripuser" where "id" like '%'||#{param1}||'%'
 	</select>
+
+	<select id="tripstyle" resultType="com.mbc.ontrip.user.UserDTO">
+		select * from "ontripuser" where "id"=#{param}
+	</select>
+	
 	
 	
 </mapper>

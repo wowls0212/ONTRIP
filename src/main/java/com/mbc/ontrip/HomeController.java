@@ -17,6 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.ui.Model;
 
 import com.mbc.ontrip.country.CountryDTO;
@@ -25,6 +26,8 @@ import com.mbc.ontrip.country.CountryService;
 import com.mbc.ontrip.pack.PackDTO;
 import com.mbc.ontrip.pack.PackPageDTO;
 import com.mbc.ontrip.pack.PackService;
+import com.mbc.ontrip.user.UserDTO;
+import com.mbc.ontrip.user.UserService;
 import com.mbc.ontrip.wifi.WIfiDTO;
 import com.mbc.ontrip.wifi.WifiService;
 import com.mbc.ontrip.wifi.WifiPageDTO;
@@ -72,6 +75,13 @@ public class HomeController {
 		int month = today.getMonthValue();
 		ArrayList<CountryDTO> mon = cs.month(month);
 		model.addAttribute("mon", mon);
+		String userid = (String) hs.getAttribute("id");
+		UserService us = sqlsession.getMapper(UserService.class);
+		UserDTO user = us.tripstyle(userid);
+		String tripstyle = user.getTripstyle();
+		model.addAttribute("tripstyle", tripstyle);
+		ArrayList<CountryDTO> constyle = cs.constyle(tripstyle);
+		model.addAttribute("constyle", constyle);
 		return "main";
 	}
 	

@@ -54,6 +54,10 @@ public interface CountryService {
 
 	void condel(int countrynum);
 
+	ArrayList<CountryDTO> style(String tripstyle);
+
+	ArrayList<CountryDTO> constyle(String tripstyle);
+
 
 
 

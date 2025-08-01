@@ -43,7 +43,7 @@
 
 	<select id="month" resultType="com.mbc.ontrip.country.CountryDTO">
 		select * from (
-			select * from "country" where "branch"=#{param1} order by "countrynum" desc)
+			select * from "country" where "branch"=#{param1} order by dbms_random.value)
 			where rownum between 1 and 6
 	</select>
 	
@@ -129,6 +129,13 @@
 	<delete id="condel">
 		delete from "country" where "countrynum"=#{param1}
 	</delete>
+	
+	<select id="constyle" resultType="com.mbc.ontrip.country.CountryDTO">
+		select * from (
+			select * from "country" where "tripstyle"=#{param1} order by dbms_random.value)
+			where rownum between 1 and 6	
+	</select>
+
 	
 	
 </mapper>
