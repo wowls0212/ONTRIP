@@ -119,7 +119,7 @@ ONTRIP은 이러한 다양한 여행자들이 원하는 정보를 효율적으�
   </div>
   <div>
     <h2>ONTRIP 자세히보기</h2>
-    <a href="https://drive.google.com/file/d/1myegeUFXae7ylm33cGE7FcRjXIKCxxpN/view?usp=sharing">PPT 링크</a>
+    <h3><a href="https://drive.google.com/file/d/1myegeUFXae7ylm33cGE7FcRjXIKCxxpN/view?usp=sharing">PPT 링크</a></h3>
   </div>
 </html>
 
